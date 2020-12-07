@@ -23,3 +23,13 @@ def sum_range(nums, start=0, end=None):
         >>> sum_range(nums, 1, 99)
         9
     """
+    if end == None: 
+        end = len(nums)
+    
+    accumulator = 0
+
+    for num in nums[start:end+1]:
+        accumulator = accumulator + num
+
+    return accumulator
+    

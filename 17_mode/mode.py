@@ -11,3 +11,8 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    nums_dict = {num: nums.count(num) for num in set(nums)}
+    max_value = max(nums_dict.values())
+    max_key = [key for key, value in nums_dict.items() if value == max_value]
+    return max_key[0]
+        
